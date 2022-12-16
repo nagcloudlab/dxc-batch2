@@ -1,0 +1,84 @@
+
+
+
+
+
+design issues
+----------------------------
+
+    - tight-coupling between dependent & dependency component(s)
+        => can't enhance with new features easily ( need re-work )
+    - unit-testing not possible
+        => dev / bug-fix slow
+
+performance issues
+-----------------------------
+
+    - too many dependency instances created
+        => resource use high and not responsive to end-user
+
+
+why these issues?
+
+ ==> creating/managing dependency-component(s) by dependent-component
+
+solution:
+
+    => Don't create dependency in dependent's home ( i.e class ), get from outside ( Factory )
+
+issues with factory design-pattern:
+
+    => Factory-location tight-coupling
+
+best-solution:
+
+     => Don't create & lookup, injected by 'container  e.g spring/quarkus framework' ( Inversion of Control )
+
+    How to implement IOC ?
+
+    => injecting dependency to dependent ( i.e dependency injection ( DI ) )
+
+    how to inject dependency to dependent ?
+
+    many ways:
+
+    -> constructor
+    -> set-method
+
+    -> field ( with help of reflection )
+
+---------------------------------------------------------------------------------------------------
+
+java is object based programming
+
+
+object's concepts
+
+    -> Interface / Abstraction
+    -> Implementation / Encapsulated
+    -> Inheritance
+    -> Polymorphism
+
+object's design principles a.k.a SOLID principles
+
+
+    The Single Responsibility Principle
+    The Open for extension-Closed for modification Principle
+    The Liskov Substitution Principle
+    The Interface Segregation Principle
+    The Dependency Inversion Principle
+
+
+How to implement all these  design principles?
+
+by patterns
+
+  1. Factory
+  2. Proxy
+  3. Observer
+  4. Strategy
+
+------------------------------------------------------------------------------
+
+
+
