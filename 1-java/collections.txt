@@ -1,0 +1,113 @@
+
+data structure(s)
+
+    1. primary data-structure  => hold single value
+    2. secondary data-structure => hold multiple values
+
+        1. linear
+            a. array
+            b. linked-list
+            c. stack
+            d. queue    
+            ...
+        2. non-linear
+            a. tree
+            b. graph
+            ..
+    ----------------------------------------------        
+
+    e.g  Array
+
+    int[] numbers=int[10]
+
+    limitations
+
+    => fixed size
+    => insertion/deletion in between elements , => slow
+
+
+    e.g LinkedList
+
+
+
+    ------------------------------------------------
+
+
+    collection(s)
+
+        - ready-to use data structure(s) from java community
+
+    
+    types collection(s)
+
+
+    1. List
+
+        -> ordered output`
+        -> index
+        -> to keep duplicates
+
+    2. Set
+
+        -> no-index
+        -> no duplicates / unique
+
+    3. Map
+
+        -> to keep data elements with user-idendity ( key ) 
+
+---------------------------------------------------------------------------------
+
+
+    collection class(s)
+
+
+    1. List
+
+        1. Vector     - ( dynamic-array ) ( thread-safe) ( slow )
+        2. ArrayList  - ( dynamic-array ) ( not-thread-safe ) ( fast compare to vector )
+        3. LinkedList - ( double-linked-list)
+
+    2. Set
+
+        1. TreeSet    - (b-tree) ( sorted )
+        2. HashSet    - (hashtable ) (un-ordered )
+        3. LinkedHashSet - ( hashtable + DLL ) ( ordered )
+
+    3. Map
+
+        1. TreeMap    - (b-tree) ( sorted )
+        2. HashMap    - (hashtable ) (un-ordered )
+        3. LinkedHashMap - ( hashtable + DLL ) ( ordered )
+        4. Hashtable  - ( thread-safety ) ( slow )
+        5. Properties - key - string - value - string
+
+    4. Queue
+
+        1. LinkedList
+        2. Dequeue
+        3. PriorityQueue
+
+   ---------------------------------------------------------------------
+
+   Collections for cocurrent programming
+
+    ArrayBlockingQueue
+    ConcurentHashMap
+    ...
+
+   ----------------------------------------------------------------------  
+   Java programming Model
+   ----------------------------------------------------------------------  
+
+
+   Top-Level    : Interface  ( 100% Abstraction of obj implementation )    
+   Middle-Level : Abstract-class(s) if required ( i.e inheritance required )
+   Bottom-Level : Implementation / Concrete-classes 
+
+   ----------------------------------------------------------------------  
+     
+
+
+
+    

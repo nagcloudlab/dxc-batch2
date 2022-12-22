@@ -8,6 +8,9 @@ import com.example.service.TransferServiceImpl;
 public class Application {
     public static void main(String[] args) {
 
+
+        Class clazz= Application.class;
+
         // init / boot phase
         System.out.println("-".repeat(100));
         AccountRepository jdbcAccountRepository = new JdbcAccountRepository();

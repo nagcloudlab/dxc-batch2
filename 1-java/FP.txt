@@ -1,0 +1,72 @@
+
+-----------------------------------------------------------------------            
+style of programming
+-----------------------------------------------------------------------            
+
+
+    1. imperative style
+
+        i.e solving any problem step-by-step
+
+        => intention + implementation mixed together
+
+    2. declarative style
+
+        separate intention from implementation 
+
+-----------------------------------------------------------------------
+
+
+Java 
+
+    - Object based programming language
+
+        Object
+            - state i.e data
+            - behavior i.e method
+
+    ---------------------------------------------
+
+
+    till java 1.7, all methods must be binded with an object.
+
+    i.e methods are not first-class-citizens
+
+    -----------------------------------------------
+
+    From java 1.8 ,
+
+        methods can be first-class-citizens like primitives & objects
+
+   -------------------------------------------------------
+
+    Method | function  | Lambda Expression
+
+    Predicate greenApplePredicate =   (Apple apple) -> {
+                                        return apple.getColor().equals("green");
+                                    }
+
+   -----------------------------------------------------------------------------  
+
+
+   declarative programming with Lambda/Functions ==> Functional Programming
+
+   -----------------------------------------------------------------------------
+
+   why we need Functional Programming?
+
+   ==> to write concise/compact code
+   ==> with function composition, can build complex algorithms with small functions
+   ==> defer some action to future, then compute if required
+   ==> to write better concurrent/parallel application
+
+   --------------------------------------------------------------------------
+
+
+   streams api
+
+      => It enables to process collection of items in declarative style using Lambda-Expressions.
+
+
+
+
