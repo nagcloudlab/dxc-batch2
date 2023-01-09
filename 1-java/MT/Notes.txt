@@ -1,0 +1,24 @@
+
+----------------------------------------------------------------
+
+process
+    -> has its own memory
+
+thread
+    -> many threads in process share same memory
+
+----------------------------------------------------------------
+
+java 1.5
+    - Executor Framework ( i.e Thread Pool )
+    - Lock Api
+    - Callable Tasks & Future
+    - Concurrent Collections
+
+java 1.7
+    - Fork-Join Framework
+
+java 1.8
+    - CompletableFuture
+
+----------------------------------------------------------------
