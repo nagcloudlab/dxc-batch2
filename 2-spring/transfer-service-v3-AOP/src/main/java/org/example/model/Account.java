@@ -1,2 +1,0 @@
-package org.example.model;public class Account {
-}

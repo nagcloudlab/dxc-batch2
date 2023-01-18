@@ -1,0 +1,22 @@
+
+
+
+while working with spring projects, developer complexities
+
+
+    => finding write maven/gradle dependency
+    => writing minimal/required/best spring-configuration 
+
+
+ leads to => productivity issue   
+
+
+ tool: 
+
+    => spring-boot
+
+        => Auto configuration tool for spring projects
+
+        
+ -------------------------------------------------------------------------------
+

@@ -1,6 +1,5 @@
 package com.example.patterns;
 
-
 class Security {
     public void doSec() {
         System.out.println("do sec check");
@@ -15,15 +14,15 @@ class Security {
  */
 
 class Building1 {
-//    Security security=new Security();
+    // Security security=new Security();
 
     public void getIntoRoom1() {
-//        security.doSec(); // security concern
+        // security.doSec(); // security concern
         System.out.println("employee working in room-1 building-1"); // real business logic
     }
 
     public void getIntoRoom2() {
-//        security.doSec(); // security concern
+        // security.doSec(); // security concern
         System.out.println("employee working in room-2 building-1");
     }
 }
@@ -45,7 +44,6 @@ class Building1Proxy {
     }
 
 }
-
 
 // Proxy Pattern
 public class Campus {
