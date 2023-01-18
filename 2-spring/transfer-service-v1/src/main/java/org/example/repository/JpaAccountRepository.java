@@ -4,12 +4,12 @@ import org.example.model.Account;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-public class JpaAccountRepository {
+public class JpaAccountRepository implements AccountRepository{
 
     private static Logger logger = LoggerFactory.getLogger("transfer-service");
 
     public JpaAccountRepository() {
-        logger.info("JdbcAccountRepository component created");
+        logger.info("JpaAccountRepository component created");
     }
 
     public Account loadAccount(String number) {

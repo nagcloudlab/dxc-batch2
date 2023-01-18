@@ -5,14 +5,14 @@ import org.example.repository.AccountRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-public class TransferServiceImpl {
+public class UPITransferService implements TransferService{
 
     private static Logger logger= LoggerFactory.getLogger("transfer-service");
     private AccountRepository accountRepository;
 
-    public TransferServiceImpl(AccountRepository accountRepository) {
+    public UPITransferService(AccountRepository accountRepository) {
         this.accountRepository = accountRepository;
-        logger.info("TransferService component created");
+        logger.info("TransferService component created with accountRepository dependency`");
     }
 
     public void transfer(double amount, String source, String destination) {

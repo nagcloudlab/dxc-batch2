@@ -1,2 +1,4 @@
-package org.example.repository;public class CustomerRepository {
+package org.example.repository;
+
+public interface CustomerRepository {
 }
