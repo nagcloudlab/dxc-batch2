@@ -4,6 +4,7 @@ import org.example.service.TransferService;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.autoconfigure.task.TaskSchedulingAutoConfiguration;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
@@ -12,7 +13,9 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 //
 @Configuration
-@EnableAutoConfiguration
+@EnableAutoConfiguration(
+        exclude = {TaskSchedulingAutoConfiguration.class}
+)
 @ComponentScan
 //@SpringBootApplication
 @EnableTransactionManagement
