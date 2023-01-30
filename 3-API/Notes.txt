@@ -1,0 +1,101 @@
+
+'todos'
+
+how to design REST-api?  
+
+
+step-1 : Find resource(s) ( todo, account ) / controlling actions ( e.g login, transfer )
+
+    - user
+    - todo
+
+step-2 : Find Relationship(s) b/w resource(s)
+
+    - one ser has many todos
+    - todo belongs to user
+
+step-3 : Provide Unique identification for resource(s) i.e URI
+
+    /users
+    /users/{user_id}
+
+    /todos
+    /todos/{todo_id}
+
+    /users/{user_id}/todos
+    /users/{user_id}/todos/{todo_id}
+
+
+step-5 : Express what operation need to be done on resource via HTTP methods
+
+    1. read
+
+        GET, HEAD, OPTION
+
+    2. write
+
+        POST ==> to create unknown resource(s) and to do controlling actions
+        PUT  ==> to create/update known resource(s)
+        PATCH ==> to update partially
+        DELETE ==> to delete existing resource(s)
+
+step-6 : choose resource representation(s)
+
+
+       -> HTML, JSON, XML, csv, ................
+
+step-7 : choose standard & custom headers 
+
+
+
+
+
+
+-----------------------------------------------------------------------
+
+
+in spring web, 
+
+in how many ways we can map incomming request to handler method?
+
+
+    -> by path
+    -> by http-method
+    -> by presence/absence of request params
+    -> by presence/absence of request headers
+
+
+
+
+-----------------------------------------------------------------------
+
+
+
+Request-parasm vs PathVariables
+
+Request-params ==> to filter the resource(s)
+PathVariables  ==> to identify resources
+
+
+-----------------------------------------------------------------------
+
+To design a REST API, you should follow these guidelines:
+
+Use HTTP methods (GET, POST, PUT, DELETE) appropriately: each HTTP method should correspond to a CRUD (Create, Read, Update, Delete) operation.
+
+Use HTTP status codes to indicate the result of an API request: for example, a 201 status code should be returned for a successful creation of a resource, while a 404 status code should be returned if the requested resource was not found.
+
+Use a consistent URI structure: all URIs should be structured in a similar way, with the same level of hierarchy, and the same naming convention.
+
+Version your API: including a version number in the URI can help you avoid breaking changes for existing clients as you add new features or modify existing ones.
+
+Return appropriate response formats: depending on the client request, return data in JSON or XML, with clear error messages for any failed requests.
+
+Use pagination for long lists: when returning a large list of resources, use pagination to limit the number of items returned in a single request and improve performance.
+
+Document your API: provide clear documentation of the API, including an explanation of the available resources, endpoints, and methods, as well as examples of how to use them.
+
+
+
+-----------------------------------------------------------------------
+
