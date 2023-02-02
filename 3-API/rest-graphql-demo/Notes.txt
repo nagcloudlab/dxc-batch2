@@ -1,0 +1,32 @@
+
+case-study : employee's todos management
+
+
+-----------------------------------------------------------------------------
+ REST api
+-----------------------------------------------------------------------------
+
+
+ 1.Resource identification in requests
+
+    /employees
+    /employees/{id}
+
+    /todos
+    /todos/{id}
+
+    /employees/{id}/todos
+
+2. Resource manipulation through representations
+
+    application/json
+
+3. Self-descriptive messages
+
+    Content-Type: application/json , Accept: application/json
+
+4. Hypermedia as the engine of application state (HATEOAS)
+
+
+
+
