@@ -1,0 +1,49 @@
+
+
+
+type Employee {
+    id: ID!
+    firstName: String!
+    lastName: String!
+    email: String!
+    mobile: String
+    address: String
+    department: Department
+}
+
+input NewEmployeeInput{
+    firstName: String!
+    lastName: String!
+    email: String!
+    mobile: String
+    address: String
+    depId: ID!
+}
+
+
+input UpdateEmployeeInput{
+    id:ID!
+    email: String
+    mobile: String
+    address: String
+}
+
+type Department{
+    id: ID!
+    name: String!
+    employees:[Employee]
+}
+
+type Query{
+    allEmployees: [Employee]
+    allDepartments:[Department]
+    oneEmployee(id:ID!):Employee
+}
+
+type Mutation{
+    newEmployee(employeeInput: NewEmployeeInput):Employee
+    updateEmployee(employeeInput: UpdateEmployeeInput):Employee
+    deleteEmployee(id:ID): ID
+}
+
+
