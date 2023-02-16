@@ -1,10 +1,7 @@
 package com.example;
 
 import lombok.RequiredArgsConstructor;
-import org.springframework.graphql.data.method.annotation.Argument;
-import org.springframework.graphql.data.method.annotation.MutationMapping;
-import org.springframework.graphql.data.method.annotation.QueryMapping;
-import org.springframework.graphql.data.method.annotation.SchemaMapping;
+import org.springframework.graphql.data.method.annotation.*;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
@@ -31,7 +28,6 @@ public class GraphQLController {
     Iterable<Department> allDepartments() {
         return departmentRepository.findAll();
     }
-
 
     @SchemaMapping(typeName = "Department",field = "employees")
     Iterable<Employee> employees(Department department){
