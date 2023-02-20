@@ -1,0 +1,34 @@
+<div *ngIf="true" class="list-group-item">
+    <div class="row">
+        <div class="col-md-4 col-sm-12">
+            <img class="img-fluid" alt="" [src]="product.imgUrl" />
+        </div>
+        <div class="col-md-8 col-sm-12">
+            <div>{{product.name}}</div>
+            <div>{{product.price}}</div>
+            <button [disabled]="!product.isAvailable" class="btn btn-sm btn-primary">Buy</button>
+            <br>
+            <ul class="nav nav-tabs">
+                <li class="nav-item">
+                    <a (click)="handleTabChange($event,1)" [ngClass]="{'nav-link':true,active:isTabSelected(1)}"
+                        href="#">Description</a>
+                </li>
+                <li class="nav-item">
+                    <a (click)="handleTabChange($event,2)" [ngClass]="{'nav-link':true,active:isTabSelected(2)}"
+                        href="#">Specification</a>
+                </li>
+                <li class="nav-item">
+                    <a (click)="handleTabChange($event,3)" [ngClass]="{'nav-link':true,active:isTabSelected(3)}"
+                        href="#">Reviews</a>
+                </li>
+            </ul>
+            <div *ngIf="isTabSelected(1)">{{product.description}}</div>
+            <div *ngIf="isTabSelected(2)">Not Yet</div>
+            <div *ngIf="isTabSelected(3)">
+                <div *ngFor="let rev of reviews" class="card card-body bg-info mt-2">
+                    <app-review [value]="rev"></app-review>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,13 @@
+<div>
+    <app-header [value]="title"></app-header>
+    <hr />
+    <div class="container">
+
+        <div class="list-group">
+            <div *ngFor="let product of products">
+                <app-product [value]="product"></app-product>
+            </div>
+        </div>
+
+    </div>
+</div>
