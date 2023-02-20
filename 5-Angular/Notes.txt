@@ -1,0 +1,67 @@
+
+------------------------------------------------------------
+Angular project
+------------------------------------------------------------
+    - Module(s)
+        - directive(s)
+        - pipe(s)
+        - service(s)
+------------------------------------------------------------
+What is directive(s)
+    => re-usable UI functionality
+     3 types
+        - component
+        - structural
+        - attribute
+------------------------------------------------------------
+What is pipe?
+    => re-usable java functionality to transform data
+------------------------------------------------------------
+What is service?
+    => re-usable java functionality holds shared data/business logic
+       as singlton object
+------------------------------------------------------------
+What is component?
+
+    UI-fragment with single-reponsibility
+
+    e.g Calender, Box
+
+
+how to make component?
+
+    component = template + style + behavior
+
+    component = .html + .css + .ts
+
+
+
+-----------------------------------------------------------------
+Angular Core Concepts
+-----------------------------------------------------------------
+
+Directives
+
+    3 types
+
+    1. component
+    2. structural
+        => to change component's template structure
+    3. attribute
+        => to change element's properties
+
+
+Data Binding
+
+    3 types
+
+    1. interpolation
+        syntax: <element>{{expression}}</element>
+
+    2. property
+        syntax: <element [prop1]="expr" [prop2]="expr"/>
+    
+    3. event
+        syntax: <element (event-name)="handler($event)"/>
+
+-----------------------------------------------------------------

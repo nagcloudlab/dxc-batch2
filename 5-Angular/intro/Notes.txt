@@ -1,0 +1,102 @@
+
+----------------------------------------------------------------------------
+
+UI -> data/info + style + behavior
+
+Web-UI
+
+    static  => data ( HTML ) + style ( CSS )
+    dynamic => data ( HTML ) + style ( CSS ) + behavior ( Javascript )
+
+----------------------------------------------------------------------------    
+
+why we need javascript with HTML pages ?
+
+  using browser provided apis, 
+  javascript programs can do any dynamic actions
+
+  browser apis ==> w3c recommendations, implemented natively by broser vendors
+
+  e.g ==> DOM,Timer, XHR/fetch , .....  
+
+ using DOM API
+ ----------------
+     -> can create,retreive,update and delete HTML elements
+     -> can change element's inner content
+     -> can change element's style
+     -> can change element's attributes/properties
+     
+ using Timer API
+ ----------------
+    -> can perform any actions on timeout/time-interval
+
+ using XHR / Fetch Api
+ ------------------------
+    -> can send request  to backend-server
+
+
+Challenges while working with browser Apis
+------------------------------------------------
+
+    -> browser compattibility issues
+    -> performance issues ( should fix manually )
+    -> memory issues ( should clean un-wanted DOM elements manually )
+    -> code organization/re-usability is bad
+
+Legacy solution(s)
+
+    -> using server-side-page technologies
+
+        e.g jsp,asp,php,...
+
+    Limitations
+
+    -> on each request, server should re-construct page keeping client's state
+    -> on each response page, browser's reloads current-page
+    -> on every response, server txring same static resources like css,image,font , increase n/w badwidth
+
+
+Modern Solution:
+
+    -> client-side page technology
+
+        How ?
+
+        -> Modern browser(s)
+        -> Improved javascript language
+        +
+        -> Third-party's javascript lib & frameworks
+
+---------------------------------------------------------------------------
+
+javascript lib & frameworks
+
+
+-> jquery
+
+    => fixed browser compattibility issues with DOM & XHR apis
+
+MVC pattern based frameworks
+
+-> knockout.js    
+-> backbone.js
+-> dojo
+-> ext.js
+-> ember.js
+-> Angular.js from google team
+
+
+component based frameworks
+
+
+-> React.js from facebook
+-> Angular from google-team  ( your topic)
+-> Vue.js
+..
+
+---------------------------------------------------------------------------
+
+
+
+
+
