@@ -2,10 +2,16 @@
     <app-header [value]="title"></app-header>
     <hr />
     <div class="container">
-
+        <app-cart-badge [value]="cart.length"></app-cart-badge>
+        <button class="btn btn-dark" (click)="toggleCart()">
+            {{isCartOpen?'Hide cart':'Show cart'}}
+        </button>
+        <br />
+        <app-cart-view *ngIf="isCartOpen" [value]="cart"></app-cart-view>
+        <br />
         <div class="list-group">
             <div *ngFor="let product of products">
-                <app-product [value]="product"></app-product>
+                <app-product [value]="product" (buy)="addToCart($event)"></app-product>
             </div>
         </div>
 

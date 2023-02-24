@@ -4,9 +4,10 @@
             <img class="img-fluid" alt="" [src]="product.imgUrl" />
         </div>
         <div class="col-md-8 col-sm-12">
-            <div>{{product.name}}</div>
-            <div>{{product.price}}</div>
-            <button [disabled]="!product.isAvailable" class="btn btn-sm btn-primary">Buy</button>
+            <div>{{product.name|uppercase}} - <small>{{product.makeDate|date:'yyyy'}}</small></div>
+            <div>{{product.price | discount | currency:product.currencyCode:'symbol'}}</div>
+            <button (click)="handleBuyClick($event)" [disabled]="!product.isAvailable"
+                class="btn btn-sm btn-primary">Buy</button>
             <br>
             <ul class="nav nav-tabs">
                 <li class="nav-item">
