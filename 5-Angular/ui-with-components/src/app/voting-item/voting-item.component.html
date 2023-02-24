@@ -1,0 +1,11 @@
+<div class="card card-body item">
+    <div class="d-flex justify-content-around">
+        <div>{{value}}</div>
+        <div class="badge bg-dark">{{likes-dislikes}}</div>
+    </div>
+    <hr />
+    <div class="d-flex justify-content-around">
+        <button (click)="handleDislikeEvent()" type="button" class="btn btn-danger">-</button>
+        <button (click)="handleLikeEvent()" type="button" class="btn btn-success">+</button>
+    </div>
+</div>

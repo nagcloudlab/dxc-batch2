@@ -57,11 +57,16 @@ Data Binding
 
     1. interpolation
         syntax: <element>{{expression}}</element>
-
     2. property
         syntax: <element [prop1]="expr" [prop2]="expr"/>
-    
     3. event
         syntax: <element (event-name)="handler($event)"/>
 
 -----------------------------------------------------------------
+
+
+UI with component(s)
+
+    
+
+

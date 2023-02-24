@@ -1,0 +1,16 @@
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>Item</th>
+            <th>+ve</th>
+            <th>-ve</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let line of value" [ngClass]="{'bg-danger':line.likes<line.dislikes}">
+            <td>{{line.name}}</td>
+            <td>{{line.likes}}</td>
+            <td>{{line.dislikes}}</td>
+        </tr>
+    </tbody>
+</table>
