@@ -1,0 +1,13 @@
+<div>
+    <app-header [value]="title"></app-header>
+    <hr />
+    <div class="container">
+        <app-cart-badge></app-cart-badge>
+        <button class="btn btn-dark" (click)="toggleCart()">
+            {{isCartOpen?'Products':'Cart'}}
+        </button>
+        <hr />
+        <app-cart-view *ngIf="isCartOpen"></app-cart-view>
+        <app-product-list *ngIf="!isCartOpen"></app-product-list>
+    </div>
+</div>
