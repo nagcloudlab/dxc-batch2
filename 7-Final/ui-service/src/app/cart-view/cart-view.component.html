@@ -1,0 +1,25 @@
+<div *ngIf="cart.length!==0">
+    <table class="table">
+        <thead>
+            <tr>
+                <td>Seq</td>
+                <td>Name</td>
+                <td>Quantity</td>
+                <td>Unit Price</td>
+                <td>Amount</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let cartLine of cart;let idx=index" appHighlight>
+                <td>{{idx+1}}</td>
+                <td>{{cartLine.name}}</td>
+                <td>Qty</td>
+                <td>{{cartLine.price}}</td>
+                <td>Amount</td>
+            </tr>
+        </tbody>
+    </table>
+    <hr />
+    <button (click)="handleCheckout()" class="btn btn-primary">Checkout</button>
+    <hr />
+</div>

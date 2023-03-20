@@ -1,0 +1,12 @@
+
+
+
+POST /api/orders
+Content-Type: application/json
+Accept: application/json
+
+{
+    itemLines:[],
+    customer:{}
+}
+

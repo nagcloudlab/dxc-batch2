@@ -1,0 +1,22 @@
+debug: true
+
+spring:
+  cloud:
+    gateway:
+      globalcors:
+        corsConfigurations:
+          '[/**]':
+            allowedHeaders: "*"
+            allowedOrigins: "http://localhost:4200"
+            allowedMethods:
+              - GET
+              - POST
+      routes:
+      - id: order_service_route
+        uri: http://localhost:8081/
+        predicates:
+        - Path=/api/orders
+      - id: product_service_route
+        uri: http://localhost:8082/
+        predicates:
+          - Path=/api/products
